@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="lainganhang">
+
+        <input type="number" placeholder="Số tiền gửi " id="tienGui">
+        <input style="width: 260px;" type="number" placeholder="Lãi suất ngân hàng ( % / năm ) " id="laiSuat">
+        <input type="number" placeholder="Thời hạn gửi (năm)  " id="thoiHan">
+
+        <button type="button" id="tinh">Tính lãi</button>
+
+        <p id="ht"></p>
+
+        <script>
+           tinh.addEventListener("click", function(){
+
+            let pV = +document.getElementById("tienGui").value;
+            let i = +document.getElementById("laiSuat").value;
+            let n = +document.getElementById("thoiHan").value;
+            let  lai ;
+
+            lai = parseInt(pV * Math.pow(( 1 + (i/100)),n));
+
+            document.getElementById("ht").innerHTML = "Số tiền bạn nhận được sau  " + n + " năm gửi ngân hàng với lãi suất " +i + "%, với số tiền gốc ban đầu là: " +pV + " đồng.\n Số tiền bạn nhận được là: " + lai + " đồng" ;
+
+
+            
+            
+           }) 
+
+        </script>
+    </div> 
+
+</body>
+</html>

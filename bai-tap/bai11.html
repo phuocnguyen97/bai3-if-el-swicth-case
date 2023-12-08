@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="bai11">
+        <h2> TÍNH THUẾ THU NHẬP CÁ NHÂN THEO THU NHẬP TỪNG THÁNG</h2>
+        <input type="number" placeholder="Nhập mức lương từng tháng của bạn" id="luong">
+        <button type="button" id="tinh">Tính thuế TNCN</button>
+        <p id="hienthi"></p>
+
+
+        <script>
+            tinh.addEventListener("click" , function(){
+                let tienLuong = + document.getElementById("luong").value;
+                let thue;
+            
+                
+                if ( 0 < tienLuong && tienLuong < 50000000 ){
+                thue = tienLuong / 100 * 5 ;
+                tongThue = thue * 12;
+                
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp theo tháng là: " +thue + " Tiền lương còn lại của bạn là: " + luongST  ;
+                }
+                
+                else if ( 5000000 < tienLuong && tienLuong < 10000000 ){
+                thue = tienLuong / 100 * 10 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+    
+                } else if ( 10000000 < tienLuong && tienLuong < 18000000 ){
+                thue = tienLuong / 100 * 15 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+                } else if ( 18000000 < tienLuong && tienLuong < 32000000 ){
+                thue = tienLuong / 100 * 20 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+                } else if ( 32000000 < tienLuong && tienLuong < 52000000 ){
+                thue = tienLuong / 100 * 25 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+                } else if ( 52000000 < tienLuong && tienLuong < 80000000 ){
+                thue = tienLuong / 100 * 30 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+                } else {
+                thue = tienLuong / 100 * 30 ;
+                luongST = tienLuong - thue;
+                document.getElementById("hienthi").innerHTML =" Thuế thu nhập cá nhân bạn phải nộp là: " +thue + " Tiền lương còn lại của bạn là: " + luongST ;
+                }
+    
+    
+                
+
+
+            })
+
+
+
+        </script>
+    </div>
+    
+</body>
+</html>
